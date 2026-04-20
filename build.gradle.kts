@@ -20,6 +20,8 @@ dependencies {
     compileOnly(libs.junit.params)
     compileOnly(libs.junit.api)
 
+    testImplementation(libs.minestom)
+    testImplementation(libs.cyano)
     testImplementation(libs.junit.api)
     testImplementation(libs.junit.params)
     testImplementation(libs.junit.platform.launcher)
