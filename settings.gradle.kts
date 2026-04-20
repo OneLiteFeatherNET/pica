@@ -1,0 +1,22 @@
+rootProject.name = "pica"
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+
+    versionCatalogs {
+        create("libs") {
+            version("minestom", "2026.04.11-1.21.11")
+            version("junit", "6.0.3")
+
+            library("minestom","net.minestom", "minestom").versionRef("minestom")
+
+            library("junit.api", "org.junit.jupiter", "junit-jupiter-api").versionRef("junit")
+            library("junit.params", "org.junit.jupiter", "junit-jupiter-params").versionRef("junit")
+            library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").versionRef("junit")
+            library("junit.platform.launcher", "org.junit.platform", "junit-platform-launcher").versionRef("junit")
+
+        }
+    }
+}
