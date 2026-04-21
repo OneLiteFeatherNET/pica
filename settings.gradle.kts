@@ -21,7 +21,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            version("minestom", "2026.04.11-1.21.11")
+            version("minestom", "2026.04.13-1.21.11")
             version("junit", "6.0.3")
             version("cyano", "0.5.6")
 
