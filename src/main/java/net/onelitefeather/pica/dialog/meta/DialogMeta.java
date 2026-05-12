@@ -7,6 +7,9 @@ import net.minestom.server.dialog.DialogInput;
 import net.minestom.server.dialog.DialogMetadata;
 import net.onelitefeather.pica.dialog.display.component.ComponentTemplate;
 import net.onelitefeather.pica.dialog.display.item.ItemTemplate;
+import net.onelitefeather.pica.dialog.input.bool.BooleanTemplate;
+import net.onelitefeather.pica.dialog.input.option.SingleOptionTemplate;
+import net.onelitefeather.pica.dialog.input.range.RangeTemplate;
 import net.onelitefeather.pica.dialog.input.text.TextInputTemplate;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
@@ -18,7 +21,7 @@ import java.util.function.Consumer;
  * The {@link DialogMeta} is responsible for building the {@link DialogMetadata} object for a {@link net.minestom.server.dialog.Dialog}.
  *
  * @author theEvilReaper
- * @version 1.0.1
+ * @version 1.1.0
  * @since 1.0.0
  */
 @ApiStatus.NonExtendable
@@ -103,6 +106,33 @@ public sealed interface DialogMeta permits DialogMetaData {
      * @return the builder
      */
     DialogMeta text(String key, Consumer<TextInputTemplate> template);
+
+    /**
+     * Add a {@link SingleOptionTemplate} to the dialog meta.
+     *
+     * @param key      the key of the option
+     * @param template the template to add
+     * @return the builder
+     */
+    DialogMeta option(String key, Consumer<SingleOptionTemplate> template);
+
+    /**
+     * Add a {@link RangeTemplate} to the dialog meta.
+     *
+     * @param key      the key of the range
+     * @param template the template to add
+     * @return the builder
+     */
+    DialogMeta range(String key, Consumer<RangeTemplate> template);
+
+    /**
+     * Add a {@link BooleanTemplate} to the dialog meta.
+     *
+     * @param key      the key of the boolean
+     * @param template the template to add
+     * @return the builder
+     */
+    DialogMeta bool(String key, Consumer<BooleanTemplate> template);
 
     /**
      * Set a list of {@link DialogInput}s to the dialog meta
