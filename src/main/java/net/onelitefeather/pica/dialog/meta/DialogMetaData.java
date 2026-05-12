@@ -7,6 +7,9 @@ import net.minestom.server.dialog.DialogInput;
 import net.minestom.server.dialog.DialogMetadata;
 import net.onelitefeather.pica.dialog.display.component.ComponentTemplate;
 import net.onelitefeather.pica.dialog.display.item.ItemTemplate;
+import net.onelitefeather.pica.dialog.input.bool.BooleanTemplate;
+import net.onelitefeather.pica.dialog.input.option.SingleOptionTemplate;
+import net.onelitefeather.pica.dialog.input.range.RangeTemplate;
 import net.onelitefeather.pica.dialog.input.text.TextInputTemplate;
 import org.jetbrains.annotations.Nullable;
 
@@ -18,7 +21,7 @@ import java.util.function.Consumer;
  * The {@link DialogMetaData} is responsible for building the {@link DialogMetadata} object.
  *
  * @author theEvilReaper
- * @version 1.0.0
+ * @version 1.1.0
  * @since 0.1.0
  */
 public final class DialogMetaData implements DialogMeta {
@@ -126,6 +129,39 @@ public final class DialogMetaData implements DialogMeta {
     @Override
     public DialogMeta text(String key, Consumer<TextInputTemplate> template) {
         TextInputTemplate body = TextInputTemplate.builder(key);
+        template.accept(body);
+        this.inputList.add(body.build());
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public DialogMeta option(String key, Consumer<SingleOptionTemplate> template) {
+        SingleOptionTemplate body = SingleOptionTemplate.builder(key);
+        template.accept(body);
+        this.inputList.add(body.build());
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public DialogMeta range(String key, Consumer<RangeTemplate> template) {
+        RangeTemplate body = RangeTemplate.builder(key);
+        template.accept(body);
+        this.inputList.add(body.build());
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public DialogMeta bool(String key, Consumer<BooleanTemplate> template) {
+        BooleanTemplate body = BooleanTemplate.builder(key);
         template.accept(body);
         this.inputList.add(body.build());
         return this;
