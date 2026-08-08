@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2](https://github.com/OneLiteFeatherNET/pica/compare/0.1.1...0.1.2) (2026-08-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.minestom:minestom to v2026.08.07-26.2 ([#29](https://github.com/OneLiteFeatherNET/pica/issues/29)) ([d1d6cb1](https://github.com/OneLiteFeatherNET/pica/commit/d1d6cb151c3c0107a5f7ff34157116a0db074a3f))
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.3 ([#30](https://github.com/OneLiteFeatherNET/pica/issues/30)) ([4c2ebb9](https://github.com/OneLiteFeatherNET/pica/commit/4c2ebb98dd60f1eae94e6cc6fba4f2dc1f64817d))
+* **deps:** update junit-framework monorepo to v6.1.3 ([#28](https://github.com/OneLiteFeatherNET/pica/issues/28)) ([9447e67](https://github.com/OneLiteFeatherNET/pica/commit/9447e674ce4114071b503ce1bb86123e95d246e9))
+
 ## [0.1.1](https://github.com/OneLiteFeatherNET/pica/compare/0.1.0...0.1.1) (2026-07-24)
 
 
