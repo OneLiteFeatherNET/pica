@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "net.onelitefeather"
-version = "0.1.1" //x-release-please-version
+version = "0.1.2" //x-release-please-version
 
 java {
     toolchain {
