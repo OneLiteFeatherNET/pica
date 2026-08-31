@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.3](https://github.com/OneLiteFeatherNET/pica/compare/0.1.2...0.1.3) (2026-08-31)
+
+
+### Features
+
+* **dialog:** add a notice dialog type ([#36](https://github.com/OneLiteFeatherNET/pica/issues/36)) ([cac9244](https://github.com/OneLiteFeatherNET/pica/commit/cac92443b1f7fd4509dcbd8fa5d9f0f8e894d49e))
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.minestom:minestom to v2026.08.28-26.2 ([#33](https://github.com/OneLiteFeatherNET/pica/issues/33)) ([4348727](https://github.com/OneLiteFeatherNET/pica/commit/4348727a85f33638d32674fa4027de1b3385521e))
+
 ## [0.1.2](https://github.com/OneLiteFeatherNET/pica/compare/0.1.1...0.1.2) (2026-08-08)
 
 
