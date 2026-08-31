@@ -21,6 +21,18 @@ public interface DialogType {
     }
 
     /**
+     * Creates a new {@link NoticeDialog} builder for building a dialog that shows a message behind
+     * a single action button.
+     *
+     * @param key the key identifying the dialog
+     * @return a new notice dialog builder
+     */
+    @Contract(pure = true)
+    static NoticeDialog notice(Key key) {
+        return new NotificationDialog(key);
+    }
+
+    /**
      * Configures the meta-data of the dialog.
      *
      * @param consumer the consumer to configure the meta-data
