@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/OneLiteFeatherNET/pica/compare/0.1.3...0.1.4) (2026-10-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.minestom:minestom to v2026.10.07-26.2 ([#39](https://github.com/OneLiteFeatherNET/pica/issues/39)) ([32a1188](https://github.com/OneLiteFeatherNET/pica/commit/32a1188da3af3700f7df19a91f07981e818b536f))
+
 ## [0.1.3](https://github.com/OneLiteFeatherNET/pica/compare/0.1.2...0.1.3) (2026-08-31)
 
 
