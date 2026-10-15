@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/OneLiteFeatherNET/pica/compare/0.1.4...0.1.5) (2026-10-15)
+
+
+### Features
+
+* **dialog:** support quick actions and pause screen dialog tags ([#43](https://github.com/OneLiteFeatherNET/pica/issues/43)) ([607e166](https://github.com/OneLiteFeatherNET/pica/commit/607e166ca41f5602b125692904a0388deb3d1dc9))
+
 ## [0.1.4](https://github.com/OneLiteFeatherNET/pica/compare/0.1.3...0.1.4) (2026-10-10)
 
 
