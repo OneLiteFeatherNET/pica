@@ -3,6 +3,7 @@ package net.onelitefeather.pica.dialog.type;
 import net.kyori.adventure.key.Key;
 import net.minestom.server.dialog.Dialog;
 import net.minestom.server.dialog.DialogActionButton;
+import net.onelitefeather.pica.dialog.DialogConstants;
 import net.onelitefeather.pica.dialog.DialogTemplate;
 import net.onelitefeather.pica.dialog.action.ActionButton;
 import net.onelitefeather.pica.dialog.meta.DialogMeta;
@@ -23,8 +24,6 @@ import java.util.function.Consumer;
  */
 public final class MultipleActionDialog implements MultiActionDialog {
 
-    static final int DEFAULT_COLUMNS = 2;
-
     private final Key key;
     private final List<ActionButton> actions;
     private DialogMeta dialogMeta;
@@ -34,7 +33,7 @@ public final class MultipleActionDialog implements MultiActionDialog {
     MultipleActionDialog(Key key) {
         this.key = key;
         this.actions = new ArrayList<>();
-        this.columns = DEFAULT_COLUMNS;
+        this.columns = DialogConstants.DEFAULT_COLUMNS;
     }
 
     /**
@@ -64,9 +63,7 @@ public final class MultipleActionDialog implements MultiActionDialog {
      */
     @Override
     public MultiActionDialog columns(int columns) {
-        if (columns < 1) {
-            throw new IllegalArgumentException("Columns must be greater than or equal to 1");
-        }
+        DialogConstants.validateColumns(columns);
         this.columns = columns;
         return this;
     }

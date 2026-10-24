@@ -11,6 +11,7 @@ public final class DialogConstants {
 
     public static final int DEFAULT_WIDTH = 200;
     public static final int DEFAULT_ACTION_WIDTH = 150;
+    public static final int DEFAULT_COLUMNS = 2;
 
     private static final int MIN_WIDTH = 1;
     private static final int MAX_WIDTH = 1024;
@@ -62,6 +63,18 @@ public final class DialogConstants {
     public static void validateWidth(int width) {
         if (width < MIN_WIDTH || width > MAX_WIDTH) {
             throw new IllegalArgumentException(String.format("Width must be between %d and %d", MIN_WIDTH, MAX_WIDTH));
+        }
+    }
+
+    /**
+     * Validates the number of columns a dialog lays its buttons out in.
+     *
+     * @param columns the number of columns to validate
+     * @throws IllegalArgumentException if the number of columns is less than 1
+     */
+    public static void validateColumns(int columns) {
+        if (columns < 1) {
+            throw new IllegalArgumentException("Columns must be greater than or equal to 1");
         }
     }
 
