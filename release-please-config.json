@@ -8,7 +8,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "package-name": "cyano",
+      "package-name": "pica",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
