@@ -49,11 +49,13 @@ first spawn. If a player is reconfigured, the client forgets its tags, so call `
 
 ### Dialog types
 
-| Factory                     | Minecraft type  | Buttons                                                  |
-|-----------------------------|-----------------|----------------------------------------------------------|
-| `DialogType.confirm(key)`     | `confirmation`  | Yes and no button, both required                         |
-| `DialogType.notice(key)`      | `notice`        | One optional action button                               |
-| `DialogType.multiAction(key)` | `multi_action`  | One or more action buttons in a grid, optional exit button |
+| Factory                       | Minecraft type | Buttons                                                    |
+|-------------------------------|----------------|------------------------------------------------------------|
+| `DialogType.confirm(key)`     | `confirmation` | Yes and no button, both required                           |
+| `DialogType.notice(key)`      | `notice`       | One optional action button                                 |
+| `DialogType.multiAction(key)` | `multi_action` | One or more action buttons in a grid, optional exit button |
+| `DialogType.serverLinks(key)` | `server_links` | One button per server link, optional exit button           |
+| `DialogType.dialogList(key)`  | `dialog_list`  | One button per listed dialog, optional exit button         |
 
 A multi-action dialog lays its buttons out row by row in `columns` columns (default `2`):
 
@@ -68,7 +70,17 @@ DialogTemplate menu = DialogType.multiAction(MENU_KEY)
     .build();
 ```
 
-### Limitations
+A dialog list shows a button for each listed dialog, labelled with that dialog's external title. The dialogs are either
+inline Minestom `Dialog` instances or keys of dialogs registered in Minestom's dialog registry, but not both in one list:
 
-The `server_links` and `dialog_list` dialog types are not supported yet. They can still be used by passing a Minestom
-`Dialog` to `DialogTemplate.of(key, dialog)`.
+```java
+DialogTemplate help = DialogType.dialogList(HELP_KEY)
+    .meta(meta -> meta.title(Component.text("Help")))
+    .dialog(Key.key("myserver:rules"))
+    .dialog(Key.key("myserver:commands"))
+    .exitAction(button -> button.label(Component.text("Close")))
+    .build();
+```
+
+The buttons of a server links dialog come from the links the server sends to the client, so only the layout and the exit
+button are configured on the builder.

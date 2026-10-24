@@ -50,7 +50,7 @@ public interface MultiActionDialog extends DialogType {
     /**
      * Sets the number of columns the action buttons are laid out in.
      *
-     * <p>Defaults to {@value MultipleActionDialog#DEFAULT_COLUMNS}, the vanilla default.</p>
+     * <p>Defaults to {@value net.onelitefeather.pica.dialog.DialogConstants#DEFAULT_COLUMNS}, the vanilla default.</p>
      *
      * @param columns the number of columns, at least 1
      * @return this builder for chaining
