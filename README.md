@@ -47,6 +47,28 @@ Register all dialogs before the server starts. Minestom freezes the dialog regis
 players receive the registry data only during the configuration phase. The tags are sent to each player on their
 first spawn. If a player is reconfigured, the client forgets its tags, so call `tags.sendTags(player)` again.
 
+### Dialog types
+
+| Factory                     | Minecraft type  | Buttons                                                  |
+|-----------------------------|-----------------|----------------------------------------------------------|
+| `DialogType.confirm(key)`     | `confirmation`  | Yes and no button, both required                         |
+| `DialogType.notice(key)`      | `notice`        | One optional action button                               |
+| `DialogType.multiAction(key)` | `multi_action`  | One or more action buttons in a grid, optional exit button |
+
+A multi-action dialog lays its buttons out row by row in `columns` columns (default `2`):
+
+```java
+DialogTemplate menu = DialogType.multiAction(MENU_KEY)
+    .meta(meta -> meta.title(Component.text("Select a mode")).afterAction(DialogAfterAction.CLOSE))
+    .action(button -> button.label(Component.text("Solo")).action(soloAction))
+    .action(button -> button.label(Component.text("Duo")).action(duoAction))
+    .action(button -> button.label(Component.text("Squad")).action(squadAction))
+    .exitAction(button -> button.label(Component.text("Back")))
+    .columns(3)
+    .build();
+```
+
 ### Limitations
 
-Currently only confirmation dialogs (`DialogType.confirm`) are supported. Support for further Minecraft dialog types is planned.
+The `server_links` and `dialog_list` dialog types are not supported yet. They can still be used by passing a Minestom
+`Dialog` to `DialogTemplate.of(key, dialog)`.
