@@ -45,6 +45,18 @@ public interface DialogType {
     }
 
     /**
+     * Creates a new {@link ServerLinksDialog} builder for building a dialog that shows the links
+     * the server sends to the client.
+     *
+     * @param key the key identifying the dialog
+     * @return a new server links dialog builder
+     */
+    @Contract(pure = true)
+    static ServerLinksDialog serverLinks(Key key) {
+        return new ServerLinkDialog(key);
+    }
+
+    /**
      * Configures the meta-data of the dialog.
      *
      * @param consumer the consumer to configure the meta-data
