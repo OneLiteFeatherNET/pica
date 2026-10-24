@@ -23,7 +23,7 @@ dependencyResolutionManagement {
         create("libs") {
             version("minestom", "2026.10.07-26.2")
             version("junit", "6.1.3")
-            version("cyano", "0.7.4")
+            version("cyano", "0.7.5")
 
             library("minestom","net.minestom", "minestom").versionRef("minestom")
             library("cyano", "net.onelitefeather", "cyano").versionRef("cyano")
