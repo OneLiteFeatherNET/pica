@@ -2,6 +2,25 @@
 
 A lightweight Dialog API for [Minestom](https://minestom.net/), built around Minecraft's native dialog system.
 
+### Getting Started
+
+The library isn't published to Maven Central, so you'll need to add our repository first.
+
+```gradle
+maven("https://repo.onelitefeather.dev/releases")
+```
+
+If you need a snapshot version, replace `releases` with `snapshots`.
+
+After that, you can add the dependency to your project:
+
+```gradle
+implementation("net.onelitefeather:pica:<version>")
+```
+
+> [!NOTE]
+> Only releases starting with `0.1.6` are available through the public repository. Earlier versions aren't publicly available.
+
 ### Usage
 
 Dialogs are built via `DialogType` and opened directly on a `Player`. The template is associated via a key from Adventure.
