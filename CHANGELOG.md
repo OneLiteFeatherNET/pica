@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.6](https://github.com/OneLiteFeatherNET/pica/compare/0.1.5...0.1.6) (2026-10-24)
+
+
+### Features
+
+* **dialog:** add multi action dialog type ([#47](https://github.com/OneLiteFeatherNET/pica/issues/47)) ([6862963](https://github.com/OneLiteFeatherNET/pica/commit/686296393f41225009c488ab0fe399de9ceb2856))
+* **dialog:** add server links and dialog list types ([#49](https://github.com/OneLiteFeatherNET/pica/issues/49)) ([1d7fd73](https://github.com/OneLiteFeatherNET/pica/commit/1d7fd7368c6a4de12d3951779e275a635c132504))
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.4 ([#51](https://github.com/OneLiteFeatherNET/pica/issues/51)) ([819e8ba](https://github.com/OneLiteFeatherNET/pica/commit/819e8ba03f8ae81d0dd6eac7c0f2c2dec446a8b0))
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.5 ([#55](https://github.com/OneLiteFeatherNET/pica/issues/55)) ([4c33bbb](https://github.com/OneLiteFeatherNET/pica/commit/4c33bbbd900e7d8a2cf8a7772933875292b8445c))
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.6 ([#58](https://github.com/OneLiteFeatherNET/pica/issues/58)) ([0691efd](https://github.com/OneLiteFeatherNET/pica/commit/0691efdafa5782ad2183efe6e527afc9f52117ec))
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.7 ([#60](https://github.com/OneLiteFeatherNET/pica/issues/60)) ([9df1048](https://github.com/OneLiteFeatherNET/pica/commit/9df1048a6a8817387fec13d0b3b88eedfed75785))
+* **deps:** update dependency net.onelitefeather:cyano to v0.7.8 ([#61](https://github.com/OneLiteFeatherNET/pica/issues/61)) ([b48d194](https://github.com/OneLiteFeatherNET/pica/commit/b48d194525b77ccf16c52fa9538de6d84d256496))
+
 ## [0.1.5](https://github.com/OneLiteFeatherNET/pica/compare/0.1.4...0.1.5) (2026-10-15)
 
 
