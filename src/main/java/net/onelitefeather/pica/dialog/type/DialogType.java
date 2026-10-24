@@ -57,6 +57,18 @@ public interface DialogType {
     }
 
     /**
+     * Creates a new {@link ListDialog} builder for building a dialog that shows a button for each
+     * of several other dialogs.
+     *
+     * @param key the key identifying the dialog
+     * @return a new dialog list builder
+     */
+    @Contract(pure = true)
+    static ListDialog dialogList(Key key) {
+        return new DialogListing(key);
+    }
+
+    /**
      * Configures the meta-data of the dialog.
      *
      * @param consumer the consumer to configure the meta-data
