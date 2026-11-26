@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/OneLiteFeatherNET/pica/compare/0.1.6...0.1.7) (2026-11-26)
+
+
+### Bug Fixes
+
+* **meta:** copy body and input lists when building dialog metadata ([fd61af7](https://github.com/OneLiteFeatherNET/pica/commit/fd61af7fde8882d36bdd69f9064b1b9ebafb1a52))
+
 ## [0.1.6](https://github.com/OneLiteFeatherNET/pica/compare/0.1.5...0.1.6) (2026-10-24)
 
 
