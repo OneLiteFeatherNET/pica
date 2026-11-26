@@ -190,6 +190,14 @@ public final class DialogMetaData implements DialogMeta {
      */
     @Override
     public DialogMetadata build() {
-        return new DialogMetadata(this.title, this.externalTitle, this.closeWithEscape, this.pause, this.afterAction, this.bodyList, this.inputList);
+        return new DialogMetadata(
+                this.title,
+                this.externalTitle,
+                this.closeWithEscape,
+                this.pause,
+                this.afterAction,
+                List.copyOf(this.bodyList),
+                List.copyOf(this.inputList)
+        );
     }
 }
